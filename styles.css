@@ -1,0 +1,179 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Garamond;
+	animation: fadeIn 2s linear;
+}
+
+body {
+	padding: 3%;
+}
+
+section {
+	margin: 2% 0;
+}
+
+/* ********************** */
+/* NAVBAR */
+/* ********************** */
+
+nav {
+	margin: 2% 0;
+}
+.navbar {
+	background: #396afc; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2948ff, #396afc); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#2948ff,
+		#396afc
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	display: flex;
+	list-style: none;
+	/* margin: 2% 0; */
+	/* padding: 2%; */
+	color: white;
+	font-weight: bold;
+	justify-content: space-between;
+}
+.navbar li {
+	/* padding: 2%; */
+	/* display: flex; */
+	text-align: center;
+	line-height: 30px;
+}
+.navbar a {
+	text-decoration: none;
+	text-transform: uppercase;
+	display: block;
+	padding: 30px;
+}
+.navbar a:hover {
+	cursor: pointer;
+	background: rgba(0, 0, 255, 0.6);
+	transition: background 0.5s;
+	border-radius: 10%;
+}
+/* ********************** */
+/* HERO */
+/* ********************** */
+.hero {
+	height: 500px;
+	background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2F1504278589%2Fpikes-peak-COLORADOSPRINGS0917.jpg&f=1&nofb=1");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	position: relative;
+}
+.title-container {
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	width: 50%;
+	font-size: 1.4em;
+	transform: translate(-50%, -50%);
+	/* opacity: 0.9;*/
+}
+.title-container h5 {
+	margin: 2% 0;
+}
+/* ********************** */
+/* ABOUT */
+/* ********************** */
+.about {
+	background: green;
+}
+/* ********************** */
+/* TESTIMONIALS */
+/* ********************** */
+.testimonials {
+	background: orangered;
+	padding: 5%;
+	display: flex;
+	justify-content: space-around;
+	animation: fadeIn 3s linear;
+}
+.testimonial-card {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: stretch;
+	background: blue;
+	margin: 2%;
+	text-align: center;
+	padding: 2%;
+}
+.testimonial-card img {
+	height: auto;
+	width: 150px;
+	margin: 5%;
+	border-radius: 50%;
+}
+.testimonial-card p {
+	line-height: 30px;
+	letter-spacing: 0.1em;
+}
+/* ********************** */
+/* DIRECTIONS */
+/* ********************** */
+.directions {
+	display: flex;
+	background: aquamarine;
+	padding: 3%;
+}
+.direction-text {
+	width: 20%;
+}
+.map {
+	/* height: 400px; */
+	background: purple;
+	width: 80%;
+}
+/* ********************** */
+/* CONTACT */
+/* ********************** */
+.email-form {
+	background: tomato;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2%;
+}
+.email-form input {
+	padding: 1%;
+}
+
+textarea {
+	width: 80%;
+	padding: 1%;
+}
+.email-form * {
+	margin: 2%;
+}
+/* ********************** */
+/* ANIMATIONS */
+
+/* ********************** */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0.25;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	75% {
+		opacity: 0.75;
+	}
+	100% {
+		opacity: 1;
+	}
+}
