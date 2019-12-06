@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Garamond;
-	animation: fadeIn 2s linear;
 }
 
 body {
@@ -66,6 +65,7 @@ nav {
 	background-position: center center;
 	background-attachment: fixed;
 	position: relative;
+	animation: fadeIn 2s linear;
 }
 .title-container {
 	text-align: center;
@@ -142,13 +142,18 @@ nav {
 	background: tomato;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	padding: 2%;
+	color: white;
+	position: relative;
+}
+.email-form label {
+	font-size: 1.3rem;
+	margin: 0;
 }
 .email-form input {
 	padding: 1%;
+	width: 40%;
 }
-
 textarea {
 	width: 80%;
 	padding: 1%;
@@ -156,9 +161,39 @@ textarea {
 .email-form * {
 	margin: 2%;
 }
+.form-submit-btn {
+	align-self: center;
+	padding: 1.5%;
+	background: slateblue;
+	width: 30%;
+	color: white;
+	font-size: 1.2rem;
+}
+.form-submit-btn:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+	background: white;
+	color: slateblue;
+}
+.confirm-msg {
+	display: none;
+}
+.show {
+	display: block;
+	background: green;
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	color: white;
+	font-size: 1.4rem;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: fadeOut 3s linear;
+}
 /* ********************** */
 /* ANIMATIONS */
-
 /* ********************** */
 @keyframes fadeIn {
 	0% {
@@ -175,5 +210,22 @@ textarea {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0.75;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	75% {
+		opacity: 0.25;
+	}
+	100% {
+		opacity: 0;
 	}
 }
