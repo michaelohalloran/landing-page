@@ -18,7 +18,7 @@ section {
 /* ********************** */
 
 nav {
-	margin: 2% 0;
+	/* margin: 2% 0; */
 }
 .navbar {
 	background: #396afc; /* fallback for old browsers */
@@ -83,11 +83,124 @@ nav {
 	margin: 2% 0;
 }
 /* ********************** */
+/* AILMENTS */
+/* ********************** */
+.ailments {
+	background: red;
+}
+/* ********************** */
 /* ABOUT */
 /* ********************** */
 .about {
 	background: green;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+	grid-template-rows: repeat(9, 1fr);
+	height: 90vh;
+	grid-gap: 10px;
 }
+.treatment-header {
+	grid-column: 1/-1;
+	grid-row: span 1;
+	color: white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.treatment {
+	grid-column: span 1;
+	background: yellow;
+	perspective: 1000px;
+	cursor: pointer;
+	animation: pulsate 3s ease-out infinite;
+	height: 39vh;
+}
+.needle,
+.adjust,
+.estim {
+	grid-row: 2/span 4;
+}
+.graston,
+.art,
+.myo {
+	grid-row: 6/span 4;
+}
+.graston .treatment-front {
+	background: url("https://www.pthealth.ca/app/uploads/2017/05/GrastonTechnique-881x441.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+.art .treatment-front {
+	background: url("https://www.schabelperformancehealth.com/wp-content/uploads/2016/02/active-release-therapy.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+.myo .treatment-front {
+	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnZRXjCxpruOSnnlOq6LeRYyZZ3r7YDFObcvsXFHNf4TPLSYhi");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+.estim .treatment-front {
+	background: url("https://www.verywellhealth.com/thmb/2d2P9YyCqTHVcx0Iqc25tbKR3rA=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/130111344-56a72aa85f9b58b7d0e780a7.JPG");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+.needle .treatment-front {
+	background: url("https://i.ytimg.com/vi/SNlEGGprixg/maxresdefault.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+.adjust .treatment-front {
+	background: url("https://timesofindia.indiatimes.com/thumb/msid-70676204,width-800,height-600,resizemode-4/70676204.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+/* .treatment img {
+	width: 30vw;
+	object-fit: cover;
+} */
+.treatment:hover .flip-container {
+	transform: rotateY(180deg);
+}
+.flip-container {
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	transform-style: preserve-3d;
+	height: 100%;
+}
+.treatment-front,
+.treatment-reverse {
+	backface-visibility: hidden;
+	position: absolute;
+}
+.treatment-front {
+	background: red;
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.treatment-reverse {
+	background: blue;
+	transform: rotateY(180deg);
+}
+/* .treatment-front:hover {
+	transform: rotateY(180deg);
+}
+.treatment-reverse:hover {
+	transform: rotateY(0deg);
+} */
 /* ********************** */
 /* TESTIMONIALS */
 /* ********************** */
@@ -227,5 +340,25 @@ textarea {
 	}
 	100% {
 		opacity: 0;
+	}
+}
+@keyframes pulsate {
+	/* 0% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.5;
+	} */
+	0% {
+		transform: scale(1.0);
+	}
+	50% {
+		transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1.0);
 	}
 }
