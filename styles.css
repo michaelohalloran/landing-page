@@ -2,7 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Garamond;
+	font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+	height: 100%;
 }
 
 body {
@@ -86,7 +91,35 @@ nav {
 /* AILMENTS */
 /* ********************** */
 .ailments {
-	background: red;
+	background: black;
+	position: relative;
+	height: 30rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.bg-video {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	opacity: 0.3;
+}
+.bg-video video {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	object-fit: cover;
+}
+.ailments-text {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	color: white;
+	font-size: 1.3rem;
+	justify-items: center;
+}
+.conditions-header {
+	grid-column: 1/-1;
 }
 /* ********************** */
 /* ABOUT */
@@ -94,14 +127,16 @@ nav {
 .about {
 	background: green;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
-	grid-template-rows: repeat(9, 1fr);
-	height: 90vh;
-	grid-gap: 10px;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(45vw, 1fr)
+	); /* grid-template-rows: repeat(9, 1fr); */ /* height: 90vh; */
+	grid-gap: 1rem;
+	justify-items: center;
 }
 .treatment-header {
 	grid-column: 1/-1;
-	grid-row: span 1;
+	/* grid-row: span 1; */
 	color: white;
 	text-align: center;
 	display: flex;
@@ -109,22 +144,23 @@ nav {
 	align-items: center;
 }
 .treatment {
-	grid-column: span 1;
+	/* grid-column: span 1; */
 	background: yellow;
 	perspective: 1000px;
 	cursor: pointer;
 	animation: pulsate 3s ease-out infinite;
-	height: 39vh;
+	height: 40vh;
+	width: 95%;
 }
 .needle,
 .adjust,
 .estim {
-	grid-row: 2/span 4;
+	/* grid-row: 2/span 4; */
 }
 .graston,
 .art,
 .myo {
-	grid-row: 6/span 4;
+	/* grid-row: 6/span 4; */
 }
 .graston .treatment-front {
 	background: url("https://www.pthealth.ca/app/uploads/2017/05/GrastonTechnique-881x441.jpg");
@@ -141,7 +177,8 @@ nav {
 	height: 100%;
 }
 .myo .treatment-front {
-	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnZRXjCxpruOSnnlOq6LeRYyZZ3r7YDFObcvsXFHNf4TPLSYhi");
+	/* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTnZRXjCxpruOSnnlOq6LeRYyZZ3r7YDFObcvsXFHNf4TPLSYhi"); */
+	background: url("https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/06/Male_Physical_therapy_1296x728-header-1296x728.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -155,7 +192,8 @@ nav {
 	height: 100%;
 }
 .needle .treatment-front {
-	background: url("https://i.ytimg.com/vi/SNlEGGprixg/maxresdefault.jpg");
+	/* background: url("https://i.ytimg.com/vi/SNlEGGprixg/maxresdefault.jpg"); */
+	background: url("https://www.healthline.com/hlcmsresource/images/topic_centers/1200x628_FACEBOOK_-Dry_Needling_vs._Acupuncture_Which_Is_Right_for_You.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -224,8 +262,8 @@ nav {
 }
 .testimonial-card img {
 	height: auto;
-	width: 150px;
-	margin: 5%;
+	width: 17rem;
+	/* margin: 5%; */
 	border-radius: 50%;
 }
 .testimonial-card p {
@@ -252,7 +290,7 @@ nav {
 /* CONTACT */
 /* ********************** */
 .email-form {
-	background: tomato;
+	background: linear-gradient(to right, #2948ff, #396afc); /* Chrome 10-25, Safari 5.1-6 */
 	display: flex;
 	flex-direction: column;
 	padding: 2%;
@@ -277,16 +315,21 @@ textarea {
 .form-submit-btn {
 	align-self: center;
 	padding: 1.5%;
-	background: slateblue;
+	/* background: rgba(106, 90, 205, 1); */ /* background: rgba(41, 72, 255, 1); color: slateblue; */
+	background: rgba(10, 166, 166, 1.0);
 	width: 30%;
 	color: white;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+	border-radius: 2rem;
+	padding: 1rem;
 }
 .form-submit-btn:hover {
 	cursor: pointer;
-	transform: scale(1.05);
-	background: white;
-	color: slateblue;
+	transform: scale(
+		1.02
+	); /* background: rgba(106, 90, 205, 0.5); color: slateblue; */ /* background: rgba(41, 72, 255, 0.6); color: slateblue; */
+	background: rgba(10, 166, 166, 0.6); /* color: slateblue; */
 }
 .confirm-msg {
 	display: none;
