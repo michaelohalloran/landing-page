@@ -52,6 +52,7 @@ nav {
 	text-transform: uppercase;
 	display: block;
 	padding: 30px;
+	color: white;
 }
 .navbar a:hover {
 	cursor: pointer;
@@ -82,7 +83,7 @@ nav {
 	width: 50%;
 	font-size: 1.4em;
 	transform: translate(-50%, -50%);
-	/* opacity: 0.9;*/
+	/* opacity: 0.9; */
 }
 .title-container h5 {
 	margin: 2% 0;
@@ -113,9 +114,8 @@ nav {
 .ailments-text {
 	display: grid;
 	width: 100%;
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 	color: white;
-	font-size: 1.3rem;
+	font-size: small;
 	justify-items: center;
 }
 .conditions-header {
@@ -124,7 +124,7 @@ nav {
 /* ********************** */
 /* ABOUT */
 /* ********************** */
-.about {
+.treatment-section {
 	background: green;
 	display: grid;
 	grid-template-columns: repeat(
@@ -262,7 +262,7 @@ nav {
 }
 .testimonial-card img {
 	height: auto;
-	width: 17rem;
+	width: 13rem;
 	/* margin: 5%; */
 	border-radius: 50%;
 }
@@ -282,7 +282,7 @@ nav {
 	width: 20%;
 }
 .map {
-	/* height: 400px; */
+	min-height: 400px;
 	background: purple;
 	width: 80%;
 }
@@ -302,8 +302,12 @@ nav {
 	margin: 0;
 }
 .email-form input {
-	padding: 1%;
-	width: 40%;
+	padding: 1.5%;
+	width: 60%;
+	/* TODO */ /* For use with animations: */
+	/* background: transparent;
+    outline: none;
+    border-bottom: 2px solid black; */
 }
 textarea {
 	width: 80%;
@@ -323,13 +327,15 @@ textarea {
 	font-weight: bold;
 	border-radius: 2rem;
 	padding: 1rem;
+	border: none;
+	outline: none;
 }
 .form-submit-btn:hover {
 	cursor: pointer;
 	transform: scale(
 		1.02
-	); /* background: rgba(106, 90, 205, 0.5); color: slateblue; */ /* background: rgba(41, 72, 255, 0.6); color: slateblue; */
-	background: rgba(10, 166, 166, 0.6); /* color: slateblue; */
+	); /* background: rgba(106, 90, 205, 0.5); color: slateblue; */ /* background: rgba(41, 72, 255, 0.6); color: slateblue; */ /* background: rgba(10, 166, 166, 0.6); color: slateblue; */
+	background: rgba(116, 230, 230, 0.9);
 }
 .confirm-msg {
 	display: none;
@@ -403,5 +409,68 @@ textarea {
 	}
 	100% {
 		transform: scale(1.0);
+	}
+}
+/* *************************** */
+/* MEDIA QUERIES */
+/* *************************** */
+@media screen and (min-width: 300px) {
+	.ailments-text {
+		font-size: 1.3rem;
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	}
+}
+@media screen and (max-width: 450px) {
+	.title-container {
+		font-size: small;
+		width: 70%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.navbar {
+		font-size: medium;
+	}
+	.navbar li {
+		line-height: normal;
+		font-size: small;
+	}
+	.navbar a {
+		padding: 1rem;
+	}
+	.testimonials {
+		flex-direction: column;
+	}
+	.testimonial-card {
+		padding: 1%;
+		margin: 1%;
+	}
+	.testimonial-card p {
+		font-size: small;
+		letter-spacing: 0;
+		line-height: normal;
+	}
+	.testimonial-card img {
+		width: 8rem;
+	}
+}
+@media screen and (max-width: 600px) {
+	.navbar {
+		flex-direction: column;
+	}
+	.navbar a {
+		padding: 0.5rem;
+	}
+	.navbar a:hover {
+		border-radius: 0;
+	}
+	.treatment .treatment-front {
+		background-size: contain;
+	}
+	.directions {
+		flex-direction: column;
+	}
+	.direction-text,
+	.map {
+		width: 100%;
 	}
 }
